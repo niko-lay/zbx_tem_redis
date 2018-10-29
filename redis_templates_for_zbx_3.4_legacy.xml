@@ -9,8 +9,8 @@
     </groups>
     <templates>
         <template>
-            <template>Template App Redis for 3.4 Plus (OLD)</template>
-            <name>Template App Redis for 3.4 Plus (OLD)</name>
+            <template>Template App Redis for 3.4 Plus (LEGACY)</template>
+            <name>Template App Redis for 3.4 Plus (LEGACY)</name>
             <description/>
             <groups>
                 <group>
@@ -1862,7 +1862,7 @@
                     </item_prototypes>
                     <trigger_prototypes>
                         <trigger_prototype>
-                            <expression>{Template App Redis for 3.4 Plus (OLD):redis_old.info.json[{#REDIS_PORT},aof_last_bgrewrite_status].last()}=0</expression>
+                            <expression>{Template App Redis for 3.4 Plus (LEGACY):redis_old.info.json[{#REDIS_PORT},aof_last_bgrewrite_status].last()}=0</expression>
                             <recovery_mode>0</recovery_mode>
                             <recovery_expression/>
                             <name>{HOST.NAME} Redis {#REDIS_PORT} AOF last bgrewrite fail !</name>
@@ -1877,14 +1877,14 @@
                             <dependencies>
                                 <dependency>
                                     <name>{HOST.NAME} Redis {#REDIS_PORT} PING fail !</name>
-                                    <expression>{Template App Redis for 3.4 Plus (OLD):redis_old.port.ping[{#REDIS_PORT}].sum(#3)}=0</expression>
+                                    <expression>{Template App Redis for 3.4 Plus (LEGACY):redis_old.port.ping[{#REDIS_PORT}].sum(#3)}=0</expression>
                                     <recovery_expression/>
                                 </dependency>
                             </dependencies>
                             <tags/>
                         </trigger_prototype>
                         <trigger_prototype>
-                            <expression>{Template App Redis for 3.4 Plus (OLD):redis_old.info.json[{#REDIS_PORT},aof_rewrite_scheduled].last()}=1</expression>
+                            <expression>{Template App Redis for 3.4 Plus (LEGACY):redis_old.info.json[{#REDIS_PORT},aof_rewrite_scheduled].last()}=1</expression>
                             <recovery_mode>0</recovery_mode>
                             <recovery_expression/>
                             <name>{HOST.NAME} Redis {#REDIS_PORT} AOF rewrite blocked by RDB SAVE !</name>
@@ -1899,14 +1899,14 @@
                             <dependencies>
                                 <dependency>
                                     <name>{HOST.NAME} Redis {#REDIS_PORT} PING fail !</name>
-                                    <expression>{Template App Redis for 3.4 Plus (OLD):redis_old.port.ping[{#REDIS_PORT}].sum(#3)}=0</expression>
+                                    <expression>{Template App Redis for 3.4 Plus (LEGACY):redis_old.port.ping[{#REDIS_PORT}].sum(#3)}=0</expression>
                                     <recovery_expression/>
                                 </dependency>
                             </dependencies>
                             <tags/>
                         </trigger_prototype>
                         <trigger_prototype>
-                            <expression>{Template App Redis for 3.4 Plus (OLD):redis_old.info.json[{#REDIS_PORT},aof_rewrite_in_progress].sum(#10)}=10</expression>
+                            <expression>{Template App Redis for 3.4 Plus (LEGACY):redis_old.info.json[{#REDIS_PORT},aof_rewrite_in_progress].sum(#10)}=10</expression>
                             <recovery_mode>0</recovery_mode>
                             <recovery_expression/>
                             <name>{HOST.NAME} Redis {#REDIS_PORT} AOF rewrite in progress long time !</name>
@@ -1921,14 +1921,14 @@
                             <dependencies>
                                 <dependency>
                                     <name>{HOST.NAME} Redis {#REDIS_PORT} PING fail !</name>
-                                    <expression>{Template App Redis for 3.4 Plus (OLD):redis_old.port.ping[{#REDIS_PORT}].sum(#3)}=0</expression>
+                                    <expression>{Template App Redis for 3.4 Plus (LEGACY):redis_old.port.ping[{#REDIS_PORT}].sum(#3)}=0</expression>
                                     <recovery_expression/>
                                 </dependency>
                             </dependencies>
                             <tags/>
                         </trigger_prototype>
                         <trigger_prototype>
-                            <expression>{Template App Redis for 3.4 Plus (OLD):redis_old.info.json[{#REDIS_PORT},latest_fork_usec].last()}&gt;1000</expression>
+                            <expression>{Template App Redis for 3.4 Plus (LEGACY):redis_old.info.json[{#REDIS_PORT},latest_fork_usec].last()}&gt;1000</expression>
                             <recovery_mode>0</recovery_mode>
                             <recovery_expression/>
                             <name>{HOST.NAME} Redis {#REDIS_PORT} latest fork time is too long !</name>
@@ -1943,14 +1943,14 @@
                             <dependencies>
                                 <dependency>
                                     <name>{HOST.NAME} Redis {#REDIS_PORT} PING fail !</name>
-                                    <expression>{Template App Redis for 3.4 Plus (OLD):redis_old.port.ping[{#REDIS_PORT}].sum(#3)}=0</expression>
+                                    <expression>{Template App Redis for 3.4 Plus (LEGACY):redis_old.port.ping[{#REDIS_PORT}].sum(#3)}=0</expression>
                                     <recovery_expression/>
                                 </dependency>
                             </dependencies>
                             <tags/>
                         </trigger_prototype>
                         <trigger_prototype>
-                            <expression>{Template App Redis for 3.4 Plus (OLD):redis_old.info.json[{#REDIS_PORT},connected_clients].last(0)}/{Template App Redis for 3.4 Plus (OLD):redis_old.config.json[{#REDIS_PORT},maxclients].last(0)}&gt;0.8</expression>
+                            <expression>{Template App Redis for 3.4 Plus (LEGACY):redis_old.info.json[{#REDIS_PORT},connected_clients].last(0)}/{Template App Redis for 3.4 Plus (LEGACY):redis_old.config.json[{#REDIS_PORT},maxclients].last(0)}&gt;0.8</expression>
                             <recovery_mode>0</recovery_mode>
                             <recovery_expression/>
                             <name>{HOST.NAME} Redis {#REDIS_PORT} maxclients use 80% !</name>
@@ -1965,14 +1965,14 @@
                             <dependencies>
                                 <dependency>
                                     <name>{HOST.NAME} Redis {#REDIS_PORT} PING fail !</name>
-                                    <expression>{Template App Redis for 3.4 Plus (OLD):redis_old.port.ping[{#REDIS_PORT}].sum(#3)}=0</expression>
+                                    <expression>{Template App Redis for 3.4 Plus (LEGACY):redis_old.port.ping[{#REDIS_PORT}].sum(#3)}=0</expression>
                                     <recovery_expression/>
                                 </dependency>
                             </dependencies>
                             <tags/>
                         </trigger_prototype>
                         <trigger_prototype>
-                            <expression>{Template App Redis for 3.4 Plus (OLD):redis_old.info.json[{#REDIS_PORT},used_memory].last(0)}/{Template App Redis for 3.4 Plus (OLD):redis_old.config.json[{#REDIS_PORT},maxmemory].last(0)}&gt;0.95</expression>
+                            <expression>{Template App Redis for 3.4 Plus (LEGACY):redis_old.info.json[{#REDIS_PORT},used_memory].last(0)}/{Template App Redis for 3.4 Plus (LEGACY):redis_old.config.json[{#REDIS_PORT},maxmemory].last(0)}&gt;0.95</expression>
                             <recovery_mode>0</recovery_mode>
                             <recovery_expression/>
                             <name>{HOST.NAME} Redis {#REDIS_PORT} maxmemory use 95% !</name>
@@ -1987,14 +1987,14 @@
                             <dependencies>
                                 <dependency>
                                     <name>{HOST.NAME} Redis {#REDIS_PORT} PING fail !</name>
-                                    <expression>{Template App Redis for 3.4 Plus (OLD):redis_old.port.ping[{#REDIS_PORT}].sum(#3)}=0</expression>
+                                    <expression>{Template App Redis for 3.4 Plus (LEGACY):redis_old.port.ping[{#REDIS_PORT}].sum(#3)}=0</expression>
                                     <recovery_expression/>
                                 </dependency>
                             </dependencies>
                             <tags/>
                         </trigger_prototype>
                         <trigger_prototype>
-                            <expression>{Template App Redis for 3.4 Plus (OLD):redis_old.info.json[{#REDIS_PORT},mem_fragmentation_ratio].last()}&gt;2</expression>
+                            <expression>{Template App Redis for 3.4 Plus (LEGACY):redis_old.info.json[{#REDIS_PORT},mem_fragmentation_ratio].last()}&gt;2</expression>
                             <recovery_mode>0</recovery_mode>
                             <recovery_expression/>
                             <name>{HOST.NAME} Redis {#REDIS_PORT} mem fragmentation ratio Too high !</name>
@@ -2009,14 +2009,14 @@
                             <dependencies>
                                 <dependency>
                                     <name>{HOST.NAME} Redis {#REDIS_PORT} PING fail !</name>
-                                    <expression>{Template App Redis for 3.4 Plus (OLD):redis_old.port.ping[{#REDIS_PORT}].sum(#3)}=0</expression>
+                                    <expression>{Template App Redis for 3.4 Plus (LEGACY):redis_old.port.ping[{#REDIS_PORT}].sum(#3)}=0</expression>
                                     <recovery_expression/>
                                 </dependency>
                             </dependencies>
                             <tags/>
                         </trigger_prototype>
                         <trigger_prototype>
-                            <expression>{Template App Redis for 3.4 Plus (OLD):redis_old.port.ping[{#REDIS_PORT}].sum(#3)}=0</expression>
+                            <expression>{Template App Redis for 3.4 Plus (LEGACY):redis_old.port.ping[{#REDIS_PORT}].sum(#3)}=0</expression>
                             <recovery_mode>0</recovery_mode>
                             <recovery_expression/>
                             <name>{HOST.NAME} Redis {#REDIS_PORT} PING fail !</name>
@@ -2032,7 +2032,7 @@
                             <tags/>
                         </trigger_prototype>
                         <trigger_prototype>
-                            <expression>{Template App Redis for 3.4 Plus (OLD):redis_old.info.json[{#REDIS_PORT},rdb_last_bgsave_status].last()}=0</expression>
+                            <expression>{Template App Redis for 3.4 Plus (LEGACY):redis_old.info.json[{#REDIS_PORT},rdb_last_bgsave_status].last()}=0</expression>
                             <recovery_mode>0</recovery_mode>
                             <recovery_expression/>
                             <name>{HOST.NAME} Redis {#REDIS_PORT} rdb last bgsave fail !</name>
@@ -2047,7 +2047,7 @@
                             <dependencies>
                                 <dependency>
                                     <name>{HOST.NAME} Redis {#REDIS_PORT} PING fail !</name>
-                                    <expression>{Template App Redis for 3.4 Plus (OLD):redis_old.port.ping[{#REDIS_PORT}].sum(#3)}=0</expression>
+                                    <expression>{Template App Redis for 3.4 Plus (LEGACY):redis_old.port.ping[{#REDIS_PORT}].sum(#3)}=0</expression>
                                     <recovery_expression/>
                                 </dependency>
                             </dependencies>
@@ -2081,7 +2081,7 @@
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
-                                        <host>Template App Redis for 3.4 Plus (OLD)</host>
+                                        <host>Template App Redis for 3.4 Plus (LEGACY)</host>
                                         <key>redis_old.info.json[{#REDIS_PORT},aof_current_rewrite_time_sec]</key>
                                     </item>
                                 </graph_item>
@@ -2093,7 +2093,7 @@
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
-                                        <host>Template App Redis for 3.4 Plus (OLD)</host>
+                                        <host>Template App Redis for 3.4 Plus (LEGACY)</host>
                                         <key>redis_old.info.json[{#REDIS_PORT},aof_enabled]</key>
                                     </item>
                                 </graph_item>
@@ -2105,7 +2105,7 @@
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
-                                        <host>Template App Redis for 3.4 Plus (OLD)</host>
+                                        <host>Template App Redis for 3.4 Plus (LEGACY)</host>
                                         <key>redis_old.info.json[{#REDIS_PORT},aof_last_bgrewrite_status]</key>
                                     </item>
                                 </graph_item>
@@ -2117,7 +2117,7 @@
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
-                                        <host>Template App Redis for 3.4 Plus (OLD)</host>
+                                        <host>Template App Redis for 3.4 Plus (LEGACY)</host>
                                         <key>redis_old.info.json[{#REDIS_PORT},aof_last_rewrite_time_sec]</key>
                                     </item>
                                 </graph_item>
@@ -2129,7 +2129,7 @@
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
-                                        <host>Template App Redis for 3.4 Plus (OLD)</host>
+                                        <host>Template App Redis for 3.4 Plus (LEGACY)</host>
                                         <key>redis_old.info.json[{#REDIS_PORT},aof_rewrite_in_progress]</key>
                                     </item>
                                 </graph_item>
@@ -2141,7 +2141,7 @@
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
-                                        <host>Template App Redis for 3.4 Plus (OLD)</host>
+                                        <host>Template App Redis for 3.4 Plus (LEGACY)</host>
                                         <key>redis_old.info.json[{#REDIS_PORT},aof_rewrite_scheduled]</key>
                                     </item>
                                 </graph_item>
@@ -2173,7 +2173,7 @@
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
-                                        <host>Template App Redis for 3.4 Plus (OLD)</host>
+                                        <host>Template App Redis for 3.4 Plus (LEGACY)</host>
                                         <key>redis_old.info.json[{#REDIS_PORT},blocked_clients]</key>
                                     </item>
                                 </graph_item>
@@ -2185,7 +2185,7 @@
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
-                                        <host>Template App Redis for 3.4 Plus (OLD)</host>
+                                        <host>Template App Redis for 3.4 Plus (LEGACY)</host>
                                         <key>redis_old.info.json[{#REDIS_PORT},connected_clients]</key>
                                     </item>
                                 </graph_item>
@@ -2197,7 +2197,7 @@
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
-                                        <host>Template App Redis for 3.4 Plus (OLD)</host>
+                                        <host>Template App Redis for 3.4 Plus (LEGACY)</host>
                                         <key>redis_old.info.json[{#REDIS_PORT},total_connections_received]</key>
                                     </item>
                                 </graph_item>
@@ -2209,7 +2209,7 @@
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
-                                        <host>Template App Redis for 3.4 Plus (OLD)</host>
+                                        <host>Template App Redis for 3.4 Plus (LEGACY)</host>
                                         <key>redis_old.info.json[{#REDIS_PORT},total_commands_processed]</key>
                                     </item>
                                 </graph_item>
@@ -2221,7 +2221,7 @@
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
-                                        <host>Template App Redis for 3.4 Plus (OLD)</host>
+                                        <host>Template App Redis for 3.4 Plus (LEGACY)</host>
                                         <key>redis_old.info.json[{#REDIS_PORT},connected_slaves]</key>
                                     </item>
                                 </graph_item>
@@ -2233,7 +2233,7 @@
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
-                                        <host>Template App Redis for 3.4 Plus (OLD)</host>
+                                        <host>Template App Redis for 3.4 Plus (LEGACY)</host>
                                         <key>redis_old.config.json[{#REDIS_PORT},maxclients]</key>
                                     </item>
                                 </graph_item>
@@ -2265,7 +2265,7 @@
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
-                                        <host>Template App Redis for 3.4 Plus (OLD)</host>
+                                        <host>Template App Redis for 3.4 Plus (LEGACY)</host>
                                         <key>redis_old.info.json[{#REDIS_PORT},used_cpu_sys]</key>
                                     </item>
                                 </graph_item>
@@ -2277,7 +2277,7 @@
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
-                                        <host>Template App Redis for 3.4 Plus (OLD)</host>
+                                        <host>Template App Redis for 3.4 Plus (LEGACY)</host>
                                         <key>redis_old.info.json[{#REDIS_PORT},used_cpu_sys_children]</key>
                                     </item>
                                 </graph_item>
@@ -2289,7 +2289,7 @@
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
-                                        <host>Template App Redis for 3.4 Plus (OLD)</host>
+                                        <host>Template App Redis for 3.4 Plus (LEGACY)</host>
                                         <key>redis_old.info.json[{#REDIS_PORT},used_cpu_user]</key>
                                     </item>
                                 </graph_item>
@@ -2301,7 +2301,7 @@
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
-                                        <host>Template App Redis for 3.4 Plus (OLD)</host>
+                                        <host>Template App Redis for 3.4 Plus (LEGACY)</host>
                                         <key>redis_old.info.json[{#REDIS_PORT},used_cpu_user_children]</key>
                                     </item>
                                 </graph_item>
@@ -2333,7 +2333,7 @@
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
-                                        <host>Template App Redis for 3.4 Plus (OLD)</host>
+                                        <host>Template App Redis for 3.4 Plus (LEGACY)</host>
                                         <key>redis_old.info.json[{#REDIS_PORT},evicted_keys]</key>
                                     </item>
                                 </graph_item>
@@ -2345,7 +2345,7 @@
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
-                                        <host>Template App Redis for 3.4 Plus (OLD)</host>
+                                        <host>Template App Redis for 3.4 Plus (LEGACY)</host>
                                         <key>redis_old.info.json[{#REDIS_PORT},expired_keys]</key>
                                     </item>
                                 </graph_item>
@@ -2377,7 +2377,7 @@
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
-                                        <host>Template App Redis for 3.4 Plus (OLD)</host>
+                                        <host>Template App Redis for 3.4 Plus (LEGACY)</host>
                                         <key>redis_old.info.json[{#REDIS_PORT},keyspace_hits]</key>
                                     </item>
                                 </graph_item>
@@ -2389,7 +2389,7 @@
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
-                                        <host>Template App Redis for 3.4 Plus (OLD)</host>
+                                        <host>Template App Redis for 3.4 Plus (LEGACY)</host>
                                         <key>redis_old.info.json[{#REDIS_PORT},keyspace_misses]</key>
                                     </item>
                                 </graph_item>
@@ -2401,7 +2401,7 @@
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
-                                        <host>Template App Redis for 3.4 Plus (OLD)</host>
+                                        <host>Template App Redis for 3.4 Plus (LEGACY)</host>
                                         <key>keyspace_hit_percent[{#REDIS_PORT}]</key>
                                     </item>
                                 </graph_item>
@@ -2433,7 +2433,7 @@
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
-                                        <host>Template App Redis for 3.4 Plus (OLD)</host>
+                                        <host>Template App Redis for 3.4 Plus (LEGACY)</host>
                                         <key>redis_old.info.json[{#REDIS_PORT},total_net_input_bytes]</key>
                                     </item>
                                 </graph_item>
@@ -2445,7 +2445,7 @@
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
-                                        <host>Template App Redis for 3.4 Plus (OLD)</host>
+                                        <host>Template App Redis for 3.4 Plus (LEGACY)</host>
                                         <key>redis_old.info.json[{#REDIS_PORT},total_net_output_bytes]</key>
                                     </item>
                                 </graph_item>
@@ -2477,7 +2477,7 @@
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
-                                        <host>Template App Redis for 3.4 Plus (OLD)</host>
+                                        <host>Template App Redis for 3.4 Plus (LEGACY)</host>
                                         <key>redis_old.info.json[{#REDIS_PORT},latest_fork_usec]</key>
                                     </item>
                                 </graph_item>
@@ -2489,7 +2489,7 @@
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
-                                        <host>Template App Redis for 3.4 Plus (OLD)</host>
+                                        <host>Template App Redis for 3.4 Plus (LEGACY)</host>
                                         <key>redis_old.port.ping[{#REDIS_PORT}]</key>
                                     </item>
                                 </graph_item>
@@ -2521,7 +2521,7 @@
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
-                                        <host>Template App Redis for 3.4 Plus (OLD)</host>
+                                        <host>Template App Redis for 3.4 Plus (LEGACY)</host>
                                         <key>redis_old.info.json[{#REDIS_PORT},rdb_bgsave_in_progress]</key>
                                     </item>
                                 </graph_item>
@@ -2533,7 +2533,7 @@
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
-                                        <host>Template App Redis for 3.4 Plus (OLD)</host>
+                                        <host>Template App Redis for 3.4 Plus (LEGACY)</host>
                                         <key>redis_old.info.json[{#REDIS_PORT},rdb_changes_since_last_save]</key>
                                     </item>
                                 </graph_item>
@@ -2545,7 +2545,7 @@
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
-                                        <host>Template App Redis for 3.4 Plus (OLD)</host>
+                                        <host>Template App Redis for 3.4 Plus (LEGACY)</host>
                                         <key>redis_old.info.json[{#REDIS_PORT},rdb_current_bgsave_time_sec]</key>
                                     </item>
                                 </graph_item>
@@ -2557,7 +2557,7 @@
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
-                                        <host>Template App Redis for 3.4 Plus (OLD)</host>
+                                        <host>Template App Redis for 3.4 Plus (LEGACY)</host>
                                         <key>redis_old.info.json[{#REDIS_PORT},rdb_last_bgsave_status]</key>
                                     </item>
                                 </graph_item>
@@ -2569,7 +2569,7 @@
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
-                                        <host>Template App Redis for 3.4 Plus (OLD)</host>
+                                        <host>Template App Redis for 3.4 Plus (LEGACY)</host>
                                         <key>redis_old.info.json[{#REDIS_PORT},rdb_last_bgsave_time_sec]</key>
                                     </item>
                                 </graph_item>
@@ -2601,7 +2601,7 @@
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
-                                        <host>Template App Redis for 3.4 Plus (OLD)</host>
+                                        <host>Template App Redis for 3.4 Plus (LEGACY)</host>
                                         <key>redis_old.config.json[{#REDIS_PORT},maxmemory]</key>
                                     </item>
                                 </graph_item>
@@ -2613,7 +2613,7 @@
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
-                                        <host>Template App Redis for 3.4 Plus (OLD)</host>
+                                        <host>Template App Redis for 3.4 Plus (LEGACY)</host>
                                         <key>redis_old.info.json[{#REDIS_PORT},used_memory]</key>
                                     </item>
                                 </graph_item>
@@ -2625,7 +2625,7 @@
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
-                                        <host>Template App Redis for 3.4 Plus (OLD)</host>
+                                        <host>Template App Redis for 3.4 Plus (LEGACY)</host>
                                         <key>redis_old.info.json[{#REDIS_PORT},used_memory_rss]</key>
                                     </item>
                                 </graph_item>
@@ -2637,7 +2637,7 @@
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
-                                        <host>Template App Redis for 3.4 Plus (OLD)</host>
+                                        <host>Template App Redis for 3.4 Plus (LEGACY)</host>
                                         <key>redis_old.info.json[{#REDIS_PORT},mem_fragmentation_ratio]</key>
                                     </item>
                                 </graph_item>
@@ -2931,7 +2931,7 @@
                     </item_prototypes>
                     <trigger_prototypes>
                         <trigger_prototype>
-                            <expression>{Template App Redis for 3.4 Plus (OLD):redis_old.slaveinfo.json[{#REDIS_PORT_SLAVE},master_link_status].last()}&lt;&gt;1</expression>
+                            <expression>{Template App Redis for 3.4 Plus (LEGACY):redis_old.slaveinfo.json[{#REDIS_PORT_SLAVE},master_link_status].last()}&lt;&gt;1</expression>
                             <recovery_mode>0</recovery_mode>
                             <recovery_expression/>
                             <name>{HOST.NAME} Redis {#REDIS_PORT_SLAVE} master link down !</name>
@@ -2974,7 +2974,7 @@
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
-                                        <host>Template App Redis for 3.4 Plus (OLD)</host>
+                                        <host>Template App Redis for 3.4 Plus (LEGACY)</host>
                                         <key>redis_old.slaveinfo.json[{#REDIS_PORT_SLAVE},master_last_io_seconds_ago]</key>
                                     </item>
                                 </graph_item>
@@ -2986,7 +2986,7 @@
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
-                                        <host>Template App Redis for 3.4 Plus (OLD)</host>
+                                        <host>Template App Redis for 3.4 Plus (LEGACY)</host>
                                         <key>redis_old.slaveinfo.json[{#REDIS_PORT_SLAVE},master_link_status]</key>
                                     </item>
                                 </graph_item>
@@ -2998,7 +2998,7 @@
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
-                                        <host>Template App Redis for 3.4 Plus (OLD)</host>
+                                        <host>Template App Redis for 3.4 Plus (LEGACY)</host>
                                         <key>redis_old.slaveinfo.json[{#REDIS_PORT_SLAVE},master_sync_in_progress]</key>
                                     </item>
                                 </graph_item>
@@ -3010,7 +3010,7 @@
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
-                                        <host>Template App Redis for 3.4 Plus (OLD)</host>
+                                        <host>Template App Redis for 3.4 Plus (LEGACY)</host>
                                         <key>redis_old.slaveinfo.json[{#REDIS_PORT_SLAVE},slave_read_only]</key>
                                     </item>
                                 </graph_item>
