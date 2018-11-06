@@ -14,7 +14,7 @@
 
 # ENV
 VERSION="1.0"
-REDIS_CONF=/etc/redis.conf
+REDIS_CONF=/etc/redis/redis.conf
 REDIS_HOST=127.0.0.1
 # if you have a single redis instance, you can use Redis SOCKET to speed up the connection
 # REDIS_SOCK=/var/run/redis/redis.sock  # comment out to use REDIS_HOST:REDIS_PORT instead of socket
